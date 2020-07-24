@@ -36,7 +36,7 @@ public class SystemTests {
             restTemplate.getForEntity(url, String.class);
         }
         catch (HttpClientErrorException e) {
-            Assert.assertEquals(HttpStatus.BAD_REQUEST, e.getStatusCode());
+            Assert.assertEquals(HttpStatus.NOT_FOUND, e.getStatusCode());
         }
     }
 }
